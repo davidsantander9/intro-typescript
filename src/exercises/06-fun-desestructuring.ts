@@ -1,4 +1,4 @@
-interface Product{
+export interface Product{
     desc: string;
     price: number;
 }
@@ -13,7 +13,7 @@ const tablet: Product = {
     price: 350,
 }
 
-function calcISV( products: Product[]):[number, number] {
+export function calcISV( products: Product[]):[number, number] {
     let total: number = 0;
     products.forEach( ({ price }) => {
         total += price;
